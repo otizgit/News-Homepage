@@ -240,18 +240,13 @@ nav ul li a:hover {
     }
     nav ul {
         position: fixed;
-        top: 0;
-        bottom: 0;
-        right: 0;
+        inset: 0;
+        transform: translate(100%);
         z-index: 7;
-        left: 100%;
         background-color: var(--OffWhite);
         flex-direction: column;
         padding-top: 23vh;
         padding-left: 30px;
-    }
-    nav ul li {
-        opacity: 0;
     }
     nav ul li a {
         color: var(--VeryDarkBlue);
@@ -286,11 +281,9 @@ nav ul li a:hover {
 
 /* !JAVASCRIPT FUNCTIONS: */
 .open {
-    left: 35%;
-}
-.animate {
-    animation: slideup .3s ease forwards .3s;
-
+    transform: translate(0);
+    left: 40%;
+    transition: .3s ease;
 }
 @keyframes slideup {
     from {
